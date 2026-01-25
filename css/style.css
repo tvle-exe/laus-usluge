@@ -44,17 +44,6 @@ body {
   font-size: 1rem;
 }
 
-/* Hamburger button */
-.hamburger {
-  display: none;
-  font-size: 2.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 1000;
-}
-
 /* ================= HERO I ABOUT ================= */
 .hero {
   margin: 40px 0;
@@ -113,35 +102,25 @@ button {
 /* ================= RESPONSIVE / MOBILE ================= */
 @media (max-width: 768px) {
   .site-header {
-    padding: 25px 15px;
+    padding: 30px 15px; /* više prostora iznad i ispod */
   }
 
   .site-header h1 {
-    font-size: 1.8rem;
-  }
-
-  .site-header nav ul {
-    flex-direction: column;
-    gap: 15px;
-    align-items: flex-start;
+    font-size: 2.2rem; /* veći naslov */
   }
 
   .site-header nav a {
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* veći linkovi */
   }
 
-  /* Hamburger vidljiv na mobilnom */
-  .hamburger {
-    display: block;
+  .header-flex {
+    flex-direction: column; /* stavlja h1 i linkove jedan ispod drugog */
+    align-items: flex-start;
+    gap: 15px;
   }
 
-  /* Meni skriven dok se ne klikne */
-  .nav-menu {
-    display: none;
-    margin-top: 15px;
-  }
-
-  .nav-menu.active {
-    display: block;
+  .site-header nav ul {
+    flex-direction: row; /* linkovi i dalje u redu */
+    gap: 15px;
   }
 }
