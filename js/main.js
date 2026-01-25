@@ -7,11 +7,7 @@ fetch('./partials/header.html')
   .then(data => {
     document.getElementById('header-placeholder').innerHTML = data;
 
-    if (hamburger && navMenu) {
-      hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-      });
-    }
+
   })
   .catch(error => console.error(error));
 
