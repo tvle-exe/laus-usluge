@@ -118,3 +118,80 @@ button {
     font-size: 1.2rem; /* linkovi malo veći */
   }
 }
+
+
+/* Osnovni header */
+.site-header {
+  background: #0b3c5d;
+  color: white;
+  padding: 20px 0;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Flex za desktop */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Hamburger (sakriven na desktopu) */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 25px 15px;
+  }
+
+  .site-header h1 {
+    font-size: 1.8rem; /* veći naslov na mobitelu */
+  }
+
+  .site-header nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    margin-top: 15px;
+  }
+
+  .nav-menu.active {
+    display: block;
+  }
+
+  .site-header nav a {
+    font-size: 1.3rem; /* veći linkovi na mobitelu */
+  }
+}
