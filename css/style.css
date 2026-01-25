@@ -89,7 +89,7 @@ button {
 }
 
 .company-image img {
-  max-width: 700px;   /* KLJUČNO – ograničenje veličine */
+  max-width: 400px;   /* KLJUČNO – ograničenje veličine */
   width: 100%;
   height: auto;
   border-radius: 6px;
