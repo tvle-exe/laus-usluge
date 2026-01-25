@@ -1,3 +1,4 @@
+// Učitavanje headera
 fetch('./partials/header.html')
   .then(response => {
     if (!response.ok) throw new Error('Header not found');
@@ -5,9 +6,20 @@ fetch('./partials/header.html')
   })
   .then(data => {
     document.getElementById('header-placeholder').innerHTML = data;
+
+    // Sada kada je header učitan, dodajemo hamburger funkcionalnost
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+    }
   })
   .catch(error => console.error(error));
 
+// Učitavanje footera
 fetch('./partials/footer.html')
   .then(response => {
     if (!response.ok) throw new Error('Footer not found');
@@ -17,11 +29,3 @@ fetch('./partials/footer.html')
     document.getElementById('footer-placeholder').innerHTML = data;
   })
   .catch(error => console.error(error));
-
-
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
