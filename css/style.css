@@ -95,3 +95,26 @@ button {
   border-radius: 6px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
+
+
+
+/* Veći header za mobilne uređaje */
+@media (max-width: 600px) {
+  .site-header {
+    padding: 25px 10px; /* više prostora oko headera */
+  }
+
+  .site-header h1 {
+    font-size: 1.8rem; /* veći naslov */
+  }
+
+  .site-header nav ul {
+    gap: 15px; /* malo manja razmaknica između linkova */
+    flex-direction: column; /* linkovi jedan ispod drugog ako je potrebno */
+    align-items: flex-start;
+  }
+
+  .site-header nav a {
+    font-size: 1.2rem; /* linkovi malo veći */
+  }
+}
