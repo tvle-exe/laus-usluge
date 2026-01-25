@@ -7,10 +7,6 @@ fetch('./partials/header.html')
   .then(data => {
     document.getElementById('header-placeholder').innerHTML = data;
 
-    // Sada kada je header učitan, dodajemo hamburger funkcionalnost
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-
     if (hamburger && navMenu) {
       hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('active');
