@@ -42,6 +42,11 @@ body {
   color: white;
   text-decoration: none;
   font-size: 1rem;
+  padding: 6px 8px;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
 }
 
 /* ================= HERO I ABOUT ================= */
@@ -66,6 +71,7 @@ form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
+  font-family: inherit;
 }
 
 button {
@@ -76,13 +82,8 @@ button {
   cursor: pointer;
 }
 
-/* ================= FOOTER ================= */
-.site-footer {
-  background: #222;
-  color: #aaa;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+button:hover {
+  opacity: 0.9;
 }
 
 /* ================= COMPANY IMAGE ================= */
@@ -99,28 +100,50 @@ button {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* ================= FOOTER ================= */
+.site-footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
 /* ================= RESPONSIVE / MOBILE ================= */
 @media (max-width: 768px) {
+
+  /* HEADER – veći i čitljiviji */
   .site-header {
-    padding: 30px 15px; /* više prostora iznad i ispod */
-  }
-
-  .site-header h1 {
-    font-size: 2.2rem; /* veći naslov */
-  }
-
-  .site-header nav a {
-    font-size: 1.3rem; /* veći linkovi */
+    padding: 32px 0; /* povećana visina headera */
   }
 
   .header-flex {
-    flex-direction: column; /* stavlja h1 i linkove jedan ispod drugog */
+    flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
+    gap: 18px;
+  }
+
+  .site-header h1 {
+    font-size: 2.3rem;
   }
 
   .site-header nav ul {
-    flex-direction: row; /* linkovi i dalje u redu */
-    gap: 15px;
+    flex-direction: row;
+    gap: 18px;
+  }
+
+  .site-header nav a {
+    font-size: 1.3rem;
+    padding: 10px 6px;
+  }
+
+  /* CONTENT */
+  .hero {
+    margin: 25px 0;
+  }
+
+  /* CONTACT */
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }
